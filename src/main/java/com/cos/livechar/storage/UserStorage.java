@@ -19,7 +19,11 @@ public class UserStorage {
         return instance;
     }
 
-    public void setUser(String username) throws Exception {
+    public Set<String> getUsers(){
+        return users;
+    }
+
+    public void setUsers(String username) throws Exception {
         if(users.contains(username)){
             throw new Exception("user exists!" + username);
         }
